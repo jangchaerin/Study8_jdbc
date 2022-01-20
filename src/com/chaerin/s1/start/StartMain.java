@@ -3,6 +3,7 @@ package com.chaerin.s1.start;
 import java.util.List;
 
 
+
 import com.chaerin.s1.department.DepartmentDAO;
 import com.chaerin.s1.department.DepartmentDTO;
 import com.chaerin.s1.department.DepartmentView;
@@ -27,17 +28,29 @@ public class StartMain {
 //			
 //		}
 		
+//		
+//		LocationDAO locationDAO = new LocationDAO();
+//		LocationView locationView = new LocationView();
+//		
+//		try {
+//			List<LocationDTO> ar = locationDAO.getList();
+//			locationView.view(ar);
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//	
 		
-		LocationDAO locationDAO = new LocationDAO();
-		LocationView locationView = new LocationView();
+		//-----------------------department테스트------------
+		DepartmentDAO departmentDAO = new DepartmentDAO();
 		
 		try {
-			List<LocationDTO> ar = locationDAO.getList();
-			locationView.view(ar);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
+			DepartmentDTO departmentDTO = departmentDAO.getOne(20);
+			System.out.println(departmentDTO.getDepartment_name());
 		
+		}catch(Exception e){
+			e.printStackTrace();
+		
+		}
 		
 		System.out.println("db연동 테스트 끝");
 		

@@ -17,7 +17,8 @@ public class LocationDAO {
 		dbConnector = new DBConnector();
 	}
 	
-	public List<LocationDTO> getList() throws Exception{
+	public List<LocationDTO> getList() throws Exception{//부모형인 list로 하는 이유
+														//다음에 유지 보수 할 때 다른코드에 영향을 주지 않게 하기위해
 		ArrayList<LocationDTO> ar = new ArrayList<>();
 		
 		//1. db에 로그인
