@@ -34,7 +34,8 @@ public class DepartmentController {
 				System.out.println("검색할 부서 번호를 입력하세요.");
 				DepartmentDTO departmentDTO = new DepartmentDTO();
 				departmentDTO.setDepartment_id(sc.nextInt());
-				departmentDTO=departmentDAO.getOne(departmentDTO);
+				departmentDTO = departmentDAO.getOne(departmentDTO);
+				departmentView.view(departmentDTO);
 				break;
 			default:
 				flag = false;
