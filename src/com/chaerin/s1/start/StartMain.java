@@ -16,10 +16,7 @@ public class StartMain {
 		System.out.println("db연동 테스트 시작");
 		
 		FrontController frontController = new FrontController();
-		
-		try {
-			
-		}
+	
 
 
 		System.out.println("db연동 테스트 끝");
